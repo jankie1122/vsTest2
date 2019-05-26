@@ -1,0 +1,73 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<!DOCTYPE html>
+
+<h2>主页</h2>
+
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+
+<form method="post" action="http://180.166.114.155:18083/quickpay-front/quickPayWap/prePay">
+    <input type="text" name="Name" id="Name" value="3245" />
+    <input type="submit" value="提交" />
+</form>
+
+
+<script>
+
+    $(function () {
+        $("#btnOK").click(function () {
+            $.ajax({
+                type: "post", dataType: "json",
+
+                //调度日志测试
+                url: "/SysGoods/WriteLog",
+                data: {
+
+                },
+
+                success: function (data) {
+
+                    //---------------------------------------
+                    alert("成功返回" + data);
+
+                    //二维码
+                    var obj = JSON.parse(data);
+                    if (obj.code == "1") {
+
+                        $('#BarCode').attr('src', obj.data["BarCode"]);
+                        $('#QRCode').attr('src', obj.data["QRCode"]);
+
+                        return;
+                    }
+
+                },
+                error: function (data) {
+                    alert("请求发送失败");
+                    alert(JSON.stringify(data))
+                    return;
+                }
+            });
+        });//btnOK
+    })
+</script>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ShopUsersTest</title>
+</head>
+<body>
+    <button id="btnOK">点击确定</button>
+    <div>
+    </div>
+
+    <img src="" alt="条形码" id="BarCode" />
+    <img src="" alt="二维码" id="QRCode" />
+
+</body>
+</html>
+
+

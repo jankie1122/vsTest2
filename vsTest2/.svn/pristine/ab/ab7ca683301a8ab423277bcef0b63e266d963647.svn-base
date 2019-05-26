@@ -1,0 +1,27 @@
+﻿
+
+
+
+@using MvcEntity.Entity;
+@model List<Students>
+@{
+    ViewBag.Title = "ShowStudentList";
+}
+
+<h2>ShowStudentList</h2>
+
+<div>
+    @{ 
+    <table>
+        @for (int i = 0; i < Model.Count; i++)
+        {
+            <tr>
+               
+                <td>@Model[i]</td>
+
+            </tr>
+        }
+        
+    </table>
+    }
+</div>

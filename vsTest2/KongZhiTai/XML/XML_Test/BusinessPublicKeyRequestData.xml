@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="gb2312"?>
+<CPMB2B>
+  <MessageData>
+    <Base>
+      <Version>1.0</Version>
+      <SignFlag>0</SignFlag>
+      <SeverModel>3</SeverModel>
+    </Base>
+    <ReqHeader>
+      <ClientTime>20171126112100</ClientTime>
+      <MerchantNo>${MerchantNo}</MerchantNo>
+      <TransCodeId>20171126112156009</TransCodeId>
+      <TransCode>100000</TransCode>
+    </ReqHeader>
+    <DataBody>
+      <Key></Key>
+    </DataBody>
+  </MessageData>
+</CPMB2B>

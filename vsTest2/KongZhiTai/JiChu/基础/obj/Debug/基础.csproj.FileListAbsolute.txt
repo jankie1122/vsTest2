@@ -1,0 +1,6 @@
+D:\jankie项目\vsTest2\KongZhiTai\JiChu\基础\bin\Debug\基础.exe.config
+D:\jankie项目\vsTest2\KongZhiTai\JiChu\基础\bin\Debug\基础.exe
+D:\jankie项目\vsTest2\KongZhiTai\JiChu\基础\bin\Debug\基础.pdb
+D:\jankie项目\vsTest2\KongZhiTai\JiChu\基础\obj\Debug\基础.csprojResolveAssemblyReference.cache
+D:\jankie项目\vsTest2\KongZhiTai\JiChu\基础\obj\Debug\基础.exe
+D:\jankie项目\vsTest2\KongZhiTai\JiChu\基础\obj\Debug\基础.pdb

@@ -1,0 +1,45 @@
+﻿
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script>
+        $(function () {
+            $("#btnOK").click(function () {
+                $.ajax({
+                    type: "post",
+                    dataType: "json",
+                    url: "/WriteLog/WriteLog4netInfo",
+                    data: {
+
+                    },
+                    success: function (data) {
+                        alert("成功返回" + data);
+                    },
+                    error: function (data) {
+                        alert("请求发送失败");
+                        alert(JSON.stringify(data))
+                        return;
+                    }
+                });
+            });
+        })
+    </script>
+</head>
+<body>
+    输入搜索内容，显示相关数据：<input id="shopCode" />
+    <button id="btnOK">搜索</button>
+    <br />
+
+    <table id="dataTable">
+        <tr>
+            <td></td>
+        </tr>
+    </table>
+</body>
+</html>

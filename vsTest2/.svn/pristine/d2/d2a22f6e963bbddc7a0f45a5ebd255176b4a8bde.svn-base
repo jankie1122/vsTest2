@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script>
+
+    $(function () {
+        $("#btnOK").click(function () {
+            $.ajax({
+                type: "post", dataType: "json",
+
+                //调度日志测试
+                url: "/SubPub/AjaxSubPub",
+                data: {
+
+                },
+
+                success: function (data) {
+
+                    //---------------------------------------
+                    alert("成功返回" + data);
+
+
+                },
+                error: function (data) {
+                    alert("请求发送失败");
+                    alert(JSON.stringify(data))
+                    return;
+                }
+            });
+        });//btnOK
+    })
+</script>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ShopUsersTest</title>
+</head>
+<body>
+    <button id="btnOK">点击确定</button>
+    <div>
+    </div>
+
+</body>
+</html>
+
